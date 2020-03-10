@@ -21,19 +21,38 @@
 title: Kimjjiro's Brain
 email: atotheha@gamil.com
 description:
-baseurl: "/index.html" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kimjjiro
 
 # Build settings
 # theme: minima
-# plugins:
-#  - jekyll-feed
+plugins:
+ - jekyll-feed
 
 defaults:
   -
     scope:
       path: "" #an empty string here means all files in the projects
+    values:
+      layout: "default"
+
+collections:
+  authors:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
     values:
       layout: "default"
 # Exclude from processing.
