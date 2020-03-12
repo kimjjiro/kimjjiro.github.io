@@ -1,0 +1,13 @@
+header {
+    padding: 15px;
+    border-bottom: thin solid #ccc;
+    font-family: "Noto Sans KR", font-family-noto, sans-serif;
+}
+
+header > * {
+    display: inline;
+}
+
+header > .title {
+    margin-right: 20px;
+}
