@@ -1,0 +1,78 @@
+/*
+  1. Positioning
+  2. Layout
+  3. Display
+  4. Visibility
+  5. Box Model
+  6. Color
+  7. Text
+  8. Animation
+  9. Others
+  10. Pseudo element
+*/
+* {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.App-Header {
+  border-bottom: thin solid #ccc;
+  padding: 1rem;
+  align-content: center;
+  font-weight: 600;
+}
+
+.Header-Wrapper {
+  display: flex;
+}
+
+.Header-Logo {
+  display: inline-block;
+  margin-right: 50px;
+  padding: 1rem;
+}
+
+.Header-Nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.Header-Nav-Ul {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.Header-Nav-Ul-Li {
+  margin-left: 10px;
+}
+
+.Header-Nae-Search {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.App-Profile {
+  border-bottom: thin solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.App-Footer {
+  /* border-top: thin solid #ccc; */
+  padding: 1rem;
+  text-align: center;
+}
+
+.Profile-Links {
+  display: inline-flex;
+  list-style: none;
+}
