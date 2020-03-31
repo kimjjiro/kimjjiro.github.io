@@ -1,14 +1,21 @@
-import * as React from 'react';
-import './layout.css';
+import React from "react";
+import { useStaticQuery, Link, graphql } from "gatsby";
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
 
 class Layout extends React.Component<{}, {}> {
-    render () {
+    render() {
         return (
             <div>
-                {this.props.children}
+                <Navbar />
+                { this.props.children }
+                <Footer />
             </div>
         )
     }
 }
 
 export default Layout;
+// const query = graphql`
+
+// `

@@ -1,0 +1,21 @@
+.MiniProfileContainer {
+    display: flex;
+    padding: 1rem;
+}
+
+.MiniProfileImageContainer {
+    margin-right: 2rem;
+}
+
+.MiniProfileDescContainer {
+    padding: 1rem;
+}
+
+.Links {
+    display: flex;
+    padding: 0;
+}
+
+.Link {
+    text: 2rem;
+}

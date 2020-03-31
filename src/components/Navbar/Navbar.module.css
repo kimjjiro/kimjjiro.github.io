@@ -1,0 +1,13 @@
+.NavbarContainer {
+    display: flex;
+    padding: 1rem;
+}
+
+.NavbarLinkUl {
+    display: flex;
+    margin-left: auto;
+}
+
+.NavbarLinkLi {
+    margin: 0 1rem;
+}

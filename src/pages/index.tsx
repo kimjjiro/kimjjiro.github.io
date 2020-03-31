@@ -1,18 +1,42 @@
 import * as React from "react";
-import { Link } from 'gatsby';
-import Layout from '../components/layout';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import MiniProfile from '../components/Profile/MiniProfile';
+import PostList from '../components/Posts/PostList';
 
 class Index extends React.Component<{}, {}> {
-    render () {
-        return (
-            <Layout>
-                <Link to="/about">About</Link>
-                <h1>Hello Gatsby!</h1>
-                <p>What a world.</p>
-                <img src="https://source.unsplash.com/random/400x200" alt="" />
-            </Layout>
-        )
-    }
+  render() {
+    return (
+      <Layout>
+        <MiniProfile />
+        <PostList {...this.props}/>
+      </Layout>
+    )
+  }
 }
 
 export default Index;
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "YYYY-MM-DD")
+          }
+        }
+      }
+    }
+  }
+`
