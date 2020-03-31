@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from 'react'
 import { graphql } from "gatsby"
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
+import MiniProfile from '../components/Profile/MiniProfile'
 
 export default class About extends React.Component<{}, {}> {
   render() {
     const data = this.props.data;
     return (
       <Layout>
-        <p>{data.site.siteMetadata.title}</p>
-        <p>t</p>
+        <MiniProfile />
       </Layout>
     )
   }

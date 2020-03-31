@@ -17,7 +17,7 @@ const Navbar: React.FunctionComponent<{}> = (props) => {
 
     const menu = [
         {
-            link: "/posts",
+            link: "/",
             text: "POSTS"
         },
         {
@@ -40,7 +40,7 @@ const Navbar: React.FunctionComponent<{}> = (props) => {
                     </li>
                 ))}
                 <li className={navbarStyle.NavbarLinkLi}>
-                    <Link to="/search">
+                    <Link to="/">
                         <IoIosSearch />
                     </Link>
                 </li>
