@@ -230,7 +230,7 @@ public class BootSpringBootApplication {
 **7. 수평선 <hr/>**
 - 아래는 모두 수평선을 만든다
 
-```
+```   
 ***
 
 * * *
@@ -240,7 +240,7 @@ public class BootSpringBootApplication {
 -----
 
 ---
-```
+```  
 
 ***
 
@@ -260,13 +260,11 @@ public class BootSpringBootApplication {
 [id]: URL "Optional Title here"
 
 exam(한줄 비워야 적용된다.)
-Link: [Google][googlelink]
-
+Link: [Google][googlelink]   
 [googlelink]: https://google.com "Go google"
 ```
 
-Link: [Google][googlelink]
-
+Link: [Google][googlelink]   
 [googlelink]: https://google.com "Go google"
 
 **9. 이미지**

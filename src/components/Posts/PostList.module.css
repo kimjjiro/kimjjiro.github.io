@@ -1,0 +1,15 @@
+.PostListContainer {
+    margin-top: 1rem;
+}
+
+.Post {
+    padding: 1rem;
+}
+
+.PostTitle {
+    
+}
+
+.PostDate {
+    text-align: right;
+}

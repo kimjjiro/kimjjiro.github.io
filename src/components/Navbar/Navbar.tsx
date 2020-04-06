@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { IoIosSearch } from 'react-icons/io';
-import navbarStyle from './Navbar.module.css';
+import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
+// import navbarStyle from './Navbar.module.css';
 
 const Navbar: React.FunctionComponent<{}> = (props) => {
     const data = useStaticQuery(graphql`
@@ -10,42 +11,36 @@ const Navbar: React.FunctionComponent<{}> = (props) => {
             siteMetadata {
                 title
                 description
+                menu {
+                    link
+                    text
+                  }
             }
         }
     }
     `);
 
-    const menu = [
-        {
-            link: "/",
-            text: "POSTS"
-        },
-        {
-            link: "/about",
-            text: "ABOUT"
-        }
-    ];
-
+    const title = data.site.siteMetadata.title;
+    const menu = data.site.siteMetadata.menu;
+    
     return (
-        <div className={navbarStyle.NavbarContainer}>
-            <Link to="/">
+        <BootstrapNavbar bg="light">
+            <BootstrapNavbar.Brand href="/">
                 {data.site.siteMetadata.title}
-            </Link>
-            <ul className={navbarStyle.NavbarLinkUl}>
-                {menu.map((item, index) => (
-                    <li key={index} className={navbarStyle.NavbarLinkLi}>
-                        <Link to={item.link}>
+            </BootstrapNavbar.Brand>
+            <BootstrapNavbar.Collapse className="justify-content-end">
+                <Nav>
+                    {menu.map((item, index) => (
+                        <Nav.Link key={index} href={item.link}>
                             {item.text}
-                        </Link>
-                    </li>
-                ))}
-                <li className={navbarStyle.NavbarLinkLi}>
-                    <Link to="/">
+                        </Nav.Link>
+                    ))}
+                    <Nav.Link href="/">
                         <IoIosSearch />
-                    </Link>
-                </li>
-            </ul>
-        </div>
+                    </Nav.Link>
+                </Nav>
+            </BootstrapNavbar.Collapse>
+        </BootstrapNavbar>
     )
 }
 

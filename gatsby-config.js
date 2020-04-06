@@ -8,7 +8,17 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `JJILOG`,
-    description: `blog start`
+    description: `blog start`,
+    menu: [
+      {
+        link: "/",
+        text: "POST"
+      },
+      {
+        link: "/about",
+        text: "ABOUT"
+      }
+    ],
   }, 
   plugins: [
     `gatsby-plugin-typescript`,

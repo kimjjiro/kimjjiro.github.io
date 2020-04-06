@@ -1,5 +1,8 @@
 import React from 'react';
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { Container, Row, Col} from 'react-bootstrap';
 import { graphql } from 'gatsby';
 
 class PostTemplate extends React.Component<{}, {}> {
@@ -8,10 +11,17 @@ class PostTemplate extends React.Component<{}, {}> {
 
         return (
             <Layout>
-                <h1>{posts.frontmatter.title}</h1>
-                <p>{posts.frontmatter.date}</p>
-                <div dangerouslySetInnerHTML={{__html: posts.html}}>
-                </div>
+                <Container>
+                    <Row>
+                        <h1>{posts.frontmatter.title}</h1>
+                    </Row>
+                    <Row>
+                        <p>{posts.frontmatter.date}</p>
+                    </Row>
+                    <Row>
+                        <ReactMarkdown source={posts.html} escapeHtml={false} />
+                    </Row>
+                </Container>
             </Layout>
         )
     }
