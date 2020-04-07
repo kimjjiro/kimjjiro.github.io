@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Badge, Card } from 'react-bootstrap';
 import { Link } from 'gatsby';
 import PostListStyle from './PostList.module.css';
 
@@ -10,14 +10,20 @@ class PostList extends React.Component<{}, {}> {
       <Container className={PostListStyle.PostListContainer}>
           {this.props.data.allMarkdownRemark.edges.map((node, index) => (
             <Link key={index} to={node.node.fields.slug}>
-              <Row className={PostListStyle.Post}>
-                  <Col>
-                    {node.node.frontmatter.title}
-                  </Col>
-                  <Col className={PostListStyle.PostDate}>
+              <Card className={PostListStyle.Post}>
+                <Card.Header >
+                  {node.node.frontmatter.language}
+                </Card.Header>
+                <Card.Body>
+                  <Card.Title>
+                      {node.node.frontmatter.title}
+                  </Card.Title>
+                  <Card.Text>
                     {node.node.frontmatter.date}
-                  </Col>
-              </Row>
+                  </Card.Text>
+                  {node.node.frontmatter.tag}
+                </Card.Body>
+              </Card>
             </Link>
           ))}
       </Container>

@@ -1,6 +1,8 @@
 ---
 title: 마크다운
 date: 2020-03-12
+language: Markdown
+tag: 마크다운
 ---
 
 # 마크다운이란
@@ -112,7 +114,24 @@ __double underscores__
 
 - 순서가 없는 목록(*,+,- 지원)
 
+```   
+* 첫번째
+    * 두번째
+        * 세번째
+```   
+
 ```
++ 첫번째
+    + 두번째
+        + 세번째
+```   
+
+```   
+- 첫번째
+    - 두번째
+        - 세번째
+```   
+
 * 첫번째
     * 두번째
         * 세번째
@@ -124,27 +143,14 @@ __double underscores__
 - 첫번째
     - 두번째
         - 세번째
-```
 
-* 첫번째
-    * 두번째
-        * 세번째
-
-+ 첫번째
-    + 두번째
-        + 세번째
-
-- 첫번째
-    - 두번째
-        - 세번째
-
-혼합해서 사용이 가능하다
-```
+혼합해서 사용이 가능하다   
+```   
 * 첫번째
     + 두번째
         - 세번째
             * 네번째
-```
+```   
 
 * 첫번째
     + 두번째
@@ -154,37 +160,39 @@ __double underscores__
 -----
 
 **6. 코드**
-- 들여쓰기
-4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되며 들여쓰지 않은 행을 만날때까지 계속된다. (한줄 띄어쓰지 않으면 적용되지 않는다.)
-```
+- 들여쓰기   
+3개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되며 들여쓰지 않은 행을 만날때까지 계속된다.
+
+```   
 start code block
     code block
 end code block
-```
+```   
+
+start code block   
+    code block   
+end code block   
+
+
+```   
 start code block
+
     code block
+
 end code block
+```   
 
+start code block   
 
-```
-start code block
-
-    code block
-
-end code block
-```
-
-start code block
-
-    code block
+    code block   
     
-end code block
+end code block   
 
 - 코드블럭
 
-아래처럼 2가지 방식을 이용할 수 있다.
-``<pre><code>{code}</code></pre>`` 이용방식
-```
+아래처럼 2가지 방식을 이용할 수 있다.   
+``<pre><code>{code}</code></pre>`` 이용방식   
+```   
 <pre>
 <code>
 public class BootSpringBootApplication {
@@ -194,36 +202,36 @@ public class BootSpringBootApplication {
 }
 </code>
 </pre>
-```
-<pre>
-<code>
+```   
+<pre>   
+<code>   
 public class BootSpringBootApplication {
   public static void main(String[] args) {
     System.out.println("Hello, Honeymon");
   }
 }
-</code>
-</pre>
+</code>   
+</pre>   
 
-<pre>
-<code>
-```
+<pre>   
+<code>   
+```   
 public class BootSpringBootApplication {
   public static void main(String[] args) {
     System.out.println("Hello, Honeymon");
   }
 }
-```
-</code>
-</pre>
+```   
+</code>   
+</pre>   
 
-```
+```   
 public class BootSpringBootApplication {
   public static void main(String[] args) {
     System.out.println("Hello, Honeymon");
   }
 }
-```
+```   
 
 -----
 
@@ -232,40 +240,31 @@ public class BootSpringBootApplication {
 
 ```   
 ***
-
 * * *
-
 *****
-
 -----
-
 ---
-```  
+```   
 
 ***
-
 * * *
-
 *****
-
 -----
-
 ---
 
 **8. 링크**
-- 참조링크
+- 참조링크   
 
-```
-[link keyword][id]
+```   
 [id]: URL "Optional Title here"
-
-exam(한줄 비워야 적용된다.)
-Link: [Google][googlelink]   
+[link keyword][id]
+- exam
 [googlelink]: https://google.com "Go google"
-```
+Link: [Google][googlelink]
+```   
 
-Link: [Google][googlelink]   
 [googlelink]: https://google.com "Go google"
+Link: [Google][googlelink]   
 
 **9. 이미지**
 

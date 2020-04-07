@@ -1,7 +1,8 @@
 ---
 title: JavaScript Array의 Map vs forEach
 date: 2020-04-06
-language: JavaScript
+language: Javascript
+tag: 반복문
 ---
 React초보로써 Navbar를 그리던 중 Map으로 그렸을 땐 나오고 forEach로 그렸을 땐 안나와서 알아본다.
 
@@ -73,6 +74,4 @@ Map
 </Nav>
 ```   
 
-메뉴가 안나왔던 이유는 render를 탈 때 이미 안그린 걸 돌려줬기 때문이라고 생각한다.   
-충격적이다. 모르는건 죄가 아니지만 시간은 아깝다.   
 끝.

@@ -1,6 +1,8 @@
 ---
 title: Github Page
 date: 2020-03-30
+language: Github
+tag: GithubPage
 ---
 
 # Github Page란   
